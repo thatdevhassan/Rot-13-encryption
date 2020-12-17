@@ -6,7 +6,6 @@ class Rot13:
     def __init__(self):
         print("type '-help' for help")
         
-
     def help_func(self,inp):
         self.inp = inp
         print('''
@@ -39,21 +38,23 @@ class Rot13:
                 print(chr(int(ord(i))-13),end='')
 
 
-# try:
-#     while True:
-#         enter_cmd = input(" ")
-#         if type(enter_cmd) == str:
-#                 # rt = Rot13(enter_cmd)
-#                 if enter_cmd == '-help':
-#                     rt.help_func()
-#                 elif enter_cmd == '-ctr':
-#                     rt.cvt_to_rot()
-#                 elif enter_cmd == "-cts":
-#                     rt.cvt_to_string()
+try:
+    while True:
+        rt = Rot13()
+        enter_cmd = input(" ")
+        if type(enter_cmd) == str:
+            if enter_cmd == '-help':
+                rt.help_func()
+            elif enter_cmd == '-ctr':
+                rt.cvt_to_rot()
+            elif enter_cmd == "-cts":
+                rt.cvt_to_string()
 
 
-# except:
-#     print("the input must be a string")
+except:
+    print("the input must be a string")
+
+    
 rt = Rot13()
 rt.cvt_to_rot("hello my name is hassan")
 print("\n")
