@@ -21,9 +21,11 @@ class Rot13:
  
         """Convert a string to rot13"""
         self.inpctr = inpctr
+        b = ''
         for i in self.inpctr:
-            if type(i) == str:
-                print(chr(int(ord(i))+13))
+            a = chr(int(ord(i))+13)
+            b+= a
+        print(b)
 
     def cvt_to_string(self,inpcts):
         self.inpcts = inpcts
@@ -31,10 +33,10 @@ class Rot13:
         """convert a rot13 to string"""
         for i in self.inpcts:
             if type(i) == str:
-                print(type(i))
                 print(chr(int(ord(i))-13),end='')
 
-
-
 rt = Rot13()
-rt.cvt_to_string("z-{nzr-v-unn{")
+
+
+rt.cvt_to_rot("Hello my name is hassan")
+
